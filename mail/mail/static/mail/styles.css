@@ -1,0 +1,32 @@
+textarea {
+    min-height: 400px;
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: .5px solid;
+  align-items: center; /* center the content vertically */
+/*  width: 1000px;*/
+  background: gray;
+  cursor: pointer;
+/*  padding: 50px;*/
+/*  text-indent: 20px;*/
+    flex-wrap: wrap;
+}
+
+.email:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*.email span.email-subject {
+    display: block;
+}*/
+.email > * {
+    flex: 1 2 300px;
+}
+#archive-button, #reply-button{
+/*  margin-left: 10px;*/
+  margin-right: 10px;
+}
+
