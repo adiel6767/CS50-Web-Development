@@ -1,0 +1,131 @@
+
+        body
+        {   
+            display: flex;
+            flex-direction: column;
+            background-color: #202124;
+            font-family: "Roboto",Arial,sans-serif;
+            color: #bdc1c6;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            margin-bottom: 10px;
+
+        }
+       .logo_link
+       {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 75px;
+        height: 25px;
+
+       } 
+       li
+       {
+        margin-left: 1410px;
+        margin-top: -20px;
+        padding-bottom: 20px;
+        font-size: 1.2em;
+        list-style: none;
+       }
+       .border_line
+       {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #3c4043;
+       }
+       h1
+       {
+        color: #f28b82;
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 35px;
+        margin-bottom: 30px;
+       }
+       h2
+       {
+        color: #e8eaed;
+        font-family: Arial,sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        font-weight: 500;
+       }
+       a
+       {
+        color: white;
+     }
+       input
+       {
+        display: flex;
+        background-color: transparent;
+        border: 1px solid #5f6368;
+        color: white;
+        width: 572px;
+        height: 25px;
+        margin: 30px;
+        margin-left: 180px;
+        margin-top: -35px;
+       }
+       
+       .form
+       {
+        margin: 20px;
+        margin-left: 30px;
+        }
+  
+       #button
+       {
+        background: #8ab4f8;
+        border-color: #8ab4f8;
+        color: #202124;
+        height: 30px;
+        width: 120px;
+        padding-left: 12px;
+        margin-left: 638.5px;
+        margin-top: 10px;
+        font-size: 11px;
+        font-weight: bold;
+        border-radius: 2px;
+        cursor: pointer;
+       }
+       #button:hover
+       {
+        background:#aecbfa;
+       }
+       .right_text
+       {
+       color: #969ba1;
+       font-size: 11px;
+       font-weight: 400;
+       height: 30px;
+       margin-left: 770px;
+       margin-top: -18px;
+        
+       }
+       span
+       {
+        font-family: monospace;
+        color: #dadce0;
+        font-size: 11px;
+        font-weight: 400;
+        white-space: pre;
+       }
+       #to_do
+       {
+        font-size: 13px;
+        font-weight: 700;
+        height: 30px;
+        margin-left:790px;
+        margin-top: -15px;
+       }
+       .rodent
+       {
+        margin-left: 10px;
+       }
+       .minature
+       {
+        margin-left: 2px;
+       }
+
+       

@@ -1,0 +1,89 @@
+        body
+        {
+            background-color: #202124;
+            font-family: "Roboto",Arial,sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;                
+        }
+        li
+        {
+            
+            list-style: none;
+            margin: -10px;
+            margin-top:  10px;
+            margin-left: 1350px;
+            style:none;
+            font-size: 1.2em;      
+        } 
+        .logo 
+        {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 125px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            width: 464px;                       
+        }
+        .form
+        {
+            width: 584px;
+        }
+        .button
+        {
+            background-color: #303134;
+            margin: 20px 4px;
+            margin-left: 220px;
+            font-family: "Roboto",Arial,sans-serif;
+            font-size: 14px;
+            height: 36px;
+            border:1px solid #303134;
+            border-radius: 4px;
+            width: 127.4px;
+            color: #e8eaed;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 16px;
+            padding-left: 16px;
+            cursor: pointer;                       
+        }
+        .search_bar 
+        {   
+            
+            display: flex;
+            flex-direction: row;
+            width: 544px;
+            height: 44px;
+            color: white;
+            font-family: "Roboto",Arial,sans-serif;            
+            border: 1px solid #5f6368;
+            border-radius: 24px;
+            font-size: 18px;
+            background-image: url("https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position-x: 12px;
+            background-position-y:13px;
+            padding-left: 40px;           
+        }
+        .search_bar:hover
+        {
+            background-color: #303134;
+            box-shadow: 0 1px 6px 0 #171717;
+            border-color: rgba(223,225,229,0);
+        }                         
+        a
+        {
+            color: white;
+        }
+        .images
+        {   
+        	font-size: 16px;
+        	margin-top: -15px;
+            margin-left: 210px;
+        	color: #4487f6;
+        }
