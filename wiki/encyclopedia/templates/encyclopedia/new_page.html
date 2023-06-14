@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>New Page</h1>
+<form action="" method="POST">
+    {%csrf_token%}
+    <div>
+        <input class="new" type="text" name="title" placeholder="Title" value='{% if submition == "submit" %} {{title}} {% endif %}'/>
+    </div>
+    <div>
+        <textarea class=text type="text" name="content" placeholder="Content" rows="4" cols="50" value='{% if submition == "submit" %} {{title}} {% endif %}'/></textarea>
+    </div>
+    <div>
+        <input class="button" type="submit" name="submit" value="save"></input>
+    </div>
+</form>
+
+
+
+
+
+{% endblock %}
