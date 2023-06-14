@@ -1,0 +1,58 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+  
+    <h2>Active Listings</h2><hr>
+    {% for item in all_listing %}
+        {% if user.is_authenticated %}       
+            {% if request.user == winner_listing_user and item.listing_title == winner_auction %}
+                    <h2>Congratulations! You ({{user}}) won the auction for {{item.listing_title}}</h2>
+            {% endif %}
+
+            {% if not item.is_closed %}
+                <form action="add_watchlist" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="item_id" value="{{ item.id }}">
+                    <input class="btn btn-secondary" type="submit" value="add to watchlist">
+                </form>
+            {% endif %}
+        {% endif %}
+
+        <p>
+            <strong>Category: </strong> {{ item.item_category }}<br/>
+            <strong>Title: </strong> {{ item.listing_title }}<br/>
+            <strong>listing description: </strong> {{ item.listing_description }}<br/>
+            <strong>listing bid: </strong>${{ item.listing_bid }}<br/>
+            <img src="{{ item.listing_image_url }}" alt="Listing image"><br/>
+            {% if request.user.is_authenticated%}
+            <a href="{% url 'listing_detail' item.id %}">
+              <button type="button" class="btn btn-primary">Listing Details</button>
+            </a>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                {% if not item.is_closed %}
+                    {% for listing_creator in listing_creators %}
+                        {% if listing_creator.user == request.user and listing_creator.auction_listing == item %}
+                            <form action="{% url 'close_auction' item_id=item.id %}" method="POST">
+                                {% csrf_token %}
+                                <input class="btn btn-danger" type="submit" value="Close Auction">
+                            </form>
+                        {% endif %}    
+                    {% endfor %}
+                {% endif %}
+        {% endif %}
+            <hr>
+        </p>
+    {% endfor %}
+
+{% endblock %}

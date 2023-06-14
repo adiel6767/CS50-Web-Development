@@ -1,0 +1,34 @@
+{% extends "auctions/layout.html"%}
+{% block body %}
+<h1>Watchlist</h1><hr>
+{% for item in all_listing %}
+<form action="remove_watchlist" method="POST">
+        {% csrf_token %}
+    <input type="hidden" name="item_id" value="{{ item.id }}">
+    <input class="btn btn-danger" type="submit" value="remove">
+    </form>
+    <br> 
+        
+<!--     <form action="{% url 'user_bid'%}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ item.id }}">
+        <input type="hidden" name="user_id" value="{{ request.user.id }}">
+        <input class="form-control" name="place_bid" type="text" placeholder="Place Bid">
+        <input class="btn btn-success" type="submit" value="submit">
+    </form>
+    <br>  -->
+   
+ <p>
+   <strong>Category: </strong> {{ item.item_category }}<br/>
+   <strong>Title: </strong> {{ item.listing_title }}<br/>
+   <strong>listing description: </strong> {{ item.listing_description }}<br/>
+   <strong>listing bid: </strong>${{ item.listing_bid }}<br/>
+   <img src="{{ item.listing_image_url }}" alt="Listing image"><br/>
+    <a href="{% url 'listing_detail' item.id %}">
+        <button type="button" class="btn btn-primary">Listing Details</button>
+    </a>
+   <hr>
+ </p>
+{% endfor %}
+{% endblock %}
+{% load static %}

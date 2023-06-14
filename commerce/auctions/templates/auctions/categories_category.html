@@ -1,0 +1,28 @@
+{% extends "auctions/layout.html"%}
+{% load static %}
+
+{% block body %}
+    <h2>Category Listing</h2><hr>
+    {% for item in all_listing %}
+        {% if user.is_authenticated %}
+        <form action="{% url 'add_watchlist' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="item_id" value="{{ item.id }}">
+            <input class="btn btn-secondary" type="submit" value="add to watchlist">
+        </form> 
+        {% endif %}
+        <p>
+           <strong>Category: </strong> {{ item.item_category }}<br/>
+           <strong>Title: </strong> {{ item.listing_title }}<br/>
+           <strong>listing description: </strong> {{ item.listing_description }}<br/>
+           <strong>listing bid: </strong>${{ item.listing_bid }}<br/>
+           <img src="{{ item.listing_image_url }}" alt="Listing image"><br/>
+           <a href="{% url 'listing_detail' item.id %}">
+               <button type="button" class="btn btn-primary">Listing Details</button>
+           </a>
+           <hr>
+        </p>
+    {% endfor %}
+
+    <!-- TODO -->
+{% endblock %}
