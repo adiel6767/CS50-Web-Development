@@ -1,0 +1,92 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+<section><h1 id='title'>Profile<h1></section>  
+{% if request.user.is_authenticated%}
+<div id="following_section">
+  <div id="username_profile"><b>{{request.user|capfirst }}</b></div><hr>
+  <div id='followers'>
+    Followers:<span id='followers_count'>{{follower_count}}</span>
+  </div>
+  <div id='following'>
+    Following:<span id='following_count'>{{following_count}}</span>
+  </div>
+  <hr>
+  <div id='follow_unfollow_buttons'>
+    <form id="follow_unfollow_form">
+      {% csrf_token %}
+      <button id='follow_unfollow_' value='Post' type="submit" class="btn btn-primary">Follow</button>
+    </form>
+  </div>
+</div>
+  <div id="post_form_border">
+  <br>  
+    <div class="posting-div" id="posting-div">
+      <form id="post_form">
+        {% csrf_token %}
+        <h4>New Post</h4>
+        <!-- add autofocus -->
+        <textarea class='form-control' id="input-post" name="input-post" rows="4" cols="50"></textarea>
+        <input type="submit" value="Post" class="btn btn-primary">
+      </form>
+    </div> 
+    <br>
+  </div>
+<br>
+{%endif%}
+<div id="posts">
+  {% for post in page_obj%}
+  <div id="all_post_border_{{ forloop.counter }}" class="all_post_border" >
+    <br>
+    <div class="All-Post-div" id="All-Post-div-{{forloop.counter}}">
+      <button id='post_author_button_{{forloop.counter}}' class="post_author_button"><b>{{post.user|capfirst}}</b></button><hr>
+      <div id='post-elements-{{ forloop.counter }}'>
+        <div id='edit-{{ forloop.counter }}'>
+      {% if request.user|capfirst == post.user|capfirst%}
+          <a href="#" id="edit-link">Edit<a><br>
+      {% endif %}
+        </div>
+      <div id="post_content-{{forloop.counter}}" data-post-id="{{post.id}}">  
+      {{post.content}}
+      </div>
+      <div class='date'>{{post.date}}</div>
+        <div class='likes'>
+          <form id="like-form_{{ forloop.counter }}">
+            {% csrf_token %}
+            <button id="like-button_{{ post.id }}" class="{% if post.id in liked_posts %}red-heart{% else %}like-form{% endif %}">
+              <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.37a5.5 5.5 0 0 0-7.78 0L12 5.45l-1.06-1.08a5.5 5.5 0 0 0-7.78 7.78L12 21.21l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span style="visibility:hidden">Like</span>
+            </button>
+            <input type="hidden" name="post-id" id ='post-id_{{ forloop.counter }}' value="{{ post.id }}">
+            <span id="like-count-{{ post.id }}">{{ post.likes }}</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endfor %}
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a href="?page=1" class="page-link">&laquo; First</a></li>
+      <li class="page-item"><a id='previous' href="?page={{ page_obj.previous_page_number }}" class="page-link">Previous</a></li>
+    {% endif %}
+
+    <li class="page-item disabled"><a href="#" class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
+
+    {% if page_obj.has_next %}
+      <li class="page-item"><a id='next' href="?page={{ page_obj.next_page_number }}" class="page-link">Next</a></li>
+      <li class="page-item"><a  href="?page={{ page_obj.paginator.num_pages }}" class="page-link">Last &raquo;</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+<script>
+  var num_posts = '{{num_posts|safe}}'
+</script>
+<script src="{% static 'network/profile.js' %}"></script>
+{% endblock %} 
