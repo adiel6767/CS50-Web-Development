@@ -67,7 +67,7 @@ How to Run the Application
 2.	Navigate to the project directory in your terminal.
 3.	Run the Django server using python manage.py runserver.
 4.	In a separate terminal window, navigate to the caps-frontend directory and run the React development server using npm start.
-5.	Open your web browser and navigate to http://localhost:3000 to access the web application. You can now use the application to perform web scraping tasks and manage scraped data.
+5.	Open your web browser and navigate to http://127.0.0.1:3000 to access the web application. You can now use the application to perform web scraping tasks and manage scraped data.
 Additional Information
 •	This project utilizes Bootstrap for styling components and forms.
 •	Ensure that appropriate permissions are set for the scrapy_spider directory to allow Scrapy spiders to run.
