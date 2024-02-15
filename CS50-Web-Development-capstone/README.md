@@ -1,33 +1,33 @@
-Web Scraper Application
+# Web Scraper Application
 
-Overview
+## Overview
 
 This project is a web application designed to simplify the process of web scraping for users without coding experience. It allows users to extract data from desired websites by providing the URL of the website and CSS selectors to target specific elements. The application streamlines the scraping process, enabling users to input text selectors to scrape the data they need, assign meaningful column names, and manage the scraped data efficiently.
 
-Sign Up
+## Sign Up
 ![signupgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/055fc9f2-38f7-49ab-8075-59268e00522a)
 
-Login
+## Login
 ![logingif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/5d1ec2c3-2460-462c-b48d-95636dd99546)
 
-Run Scraper
+## Run Scraper
 ![submitgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/10302be3-15b9-4e9b-ba45-b91a283e0510)
 
-Dashboard
+## Dashboard
 ![dashgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/f052159c-4d0b-4d1c-8e93-e49514fd46c3)
 
-Archive
+## Archive
 ![archivegif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/55f8a111-3dee-42ca-aebd-d0a718e84ebd)
 
-Archive pt2
+## Archive pt2
 ![archivept2gif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/5584e750-f700-47d0-a429-cc3428c1b610)
 
 Youtube Link
 https://youtu.be/TDcsg6SdIiY
 
-Distinctiveness and Complexity
+# Distinctiveness and Complexity
 
-Distinctiveness
+## Distinctiveness
 
 •	This project is unique in its emphasis on delivering a user-friendly interface tailored specifically for web scraping, making it accessible to users without technical expertise.
 
@@ -35,16 +35,16 @@ Distinctiveness
 
 •	Authentication functionalities, along with advanced data storage and manipulation capabilities, further set this project apart, offering a comprehensive and feature-rich experience not found in e-commerce or social media applications done previously in the course.
 
-Complexity
+## Complexity
 •	The project's complexity lies in its integration of multiple technologies, including React, Django, Django Rest Framework, and Scrapy.
 
 •	It involves the creation of frontend components in React, backend logic in Django, and spider implementation in Scrapy, showcasing a diverse skill set.
 
 •	The incorporation of user authentication, data validation, and CRUD operations adds complexity to the project.
 
-File Structure
+# File Structure
 
-Frontend (caps-frontend)
+## Frontend (caps-frontend)
 
 •	public: Contains the main HTML file and other static assets.
 
@@ -67,7 +67,7 @@ o	ScrapeForm.js: Enables users to input scraping parameters.
 
 o	UserContext.js: Manages user authentication state.
 
-Backend (WebScraper)
+## Backend (WebScraper)
 
 •	pycache: Contains Python bytecode files.
 
@@ -87,7 +87,7 @@ Backend (WebScraper)
 
 •	views.py: Defines Django views for user authentication and CRUD operations.
 
-Additional Dependencies
+# Additional Dependencies
 
 •	Axios: This project utilizes Axios, a promise-based HTTP client for making requests to the backend API endpoints. Axios simplifies the process of handling asynchronous requests and managing responses.
 
@@ -118,7 +118,7 @@ Note
 •	Refer to the official documentation of Axios and Ant Design for detailed usage instructions and customization options.
 By incorporating Axios and Ant Design into the project, users can benefit from enhanced data management capabilities and improved user interface design, resulting in a more efficient and user-friendly web scraping experience.
 
-How to Run the Application
+# How to Run the Application
 
 1.	Clone the repository to your local machine.
 
@@ -130,7 +130,7 @@ How to Run the Application
 
 5.	Open your web browser and navigate to http://127.0.0.1:3000 to access the web application. You can now use the application to perform web scraping tasks and manage scraped data.
 
-Additional Information
+# Additional Information
 
 •	This project utilizes Bootstrap for styling components and forms.
 
