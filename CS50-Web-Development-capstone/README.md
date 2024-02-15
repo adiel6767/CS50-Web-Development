@@ -4,6 +4,27 @@ Overview
 
 This project is a web application designed to simplify the process of web scraping for users without coding experience. It allows users to extract data from desired websites by providing the URL of the website and CSS selectors to target specific elements. The application streamlines the scraping process, enabling users to input text selectors to scrape the data they need, assign meaningful column names, and manage the scraped data efficiently.
 
+Sign Up
+![signupgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/055fc9f2-38f7-49ab-8075-59268e00522a)
+
+Login
+![logingif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/5d1ec2c3-2460-462c-b48d-95636dd99546)
+
+Run Scraper
+![submitgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/10302be3-15b9-4e9b-ba45-b91a283e0510)
+
+Dashboard
+![dashgif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/f052159c-4d0b-4d1c-8e93-e49514fd46c3)
+
+Archive
+![archivegif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/55f8a111-3dee-42ca-aebd-d0a718e84ebd)
+
+Archive pt2
+![archivept2gif](https://github.com/adiel6767/CS50-Web-Development/assets/112980086/5584e750-f700-47d0-a429-cc3428c1b610)
+
+Youtube Link
+https://youtu.be/TDcsg6SdIiY
+
 Distinctiveness and Complexity
 
 Distinctiveness
@@ -12,7 +33,7 @@ Distinctiveness
 
 •	The utilization of React for the frontend and Django Rest Framework for the backend provides a powerful and adaptable solution, distinguishing it from previous projects in the CS50’s Web Programming with Python and JavaScript course.
 
-•	Authentication functionalities, along with advanced data storage and manipulation capabilities, further set this project apart, offering a comprehensive and feature-rich experience not typically found in traditional e-commerce or social media applications done previously in the course.
+•	Authentication functionalities, along with advanced data storage and manipulation capabilities, further set this project apart, offering a comprehensive and feature-rich experience not found in e-commerce or social media applications done previously in the course.
 
 Complexity
 •	The project's complexity lies in its integration of multiple technologies, including React, Django, Django Rest Framework, and Scrapy.
